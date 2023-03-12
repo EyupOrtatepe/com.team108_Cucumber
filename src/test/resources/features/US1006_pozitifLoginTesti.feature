@@ -1,5 +1,5 @@
 Feature: US1005 Pozitif login testi
-@wip
+
   Scenario: TC10 Gecerli kullanici adi ve sifre ile sisteme giris yapilabilmeli
 
     Given kullanici "qdUrl" anasayfaya gider

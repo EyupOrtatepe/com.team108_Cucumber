@@ -38,10 +38,11 @@ public class Driver {
                     driver = new SafariDriver();
                     break;
                 default:
-
                     WebDriverManager.chromedriver().setup();
+                    ChromeOptions options=new ChromeOptions();
+                    options.addArguments("--remote-allow-origins=*");
+                    driver = new ChromeDriver(options);
 
-                    driver = new ChromeDriver();
             }
         }
         driver.manage().window().maximize();
@@ -51,7 +52,7 @@ public class Driver {
     }
     public static void closeDriver(){
         if (driver != null){
-            driver.close();
+            //driver.close();
             driver=null;
         }
     }
