@@ -38,10 +38,13 @@ public class Driver {
                     driver = new SafariDriver();
                     break;
                 default:
+                    System.setProperty("webdriver.http.factory", "jdk-http-client");
                     WebDriverManager.chromedriver().setup();
-                    ChromeOptions options=new ChromeOptions();
-                    options.addArguments("--remote-allow-origins=*");
-                    driver = new ChromeDriver(options);
+                   // ChromeOptions options=new ChromeOptions();
+                   // options.addArguments("--remote-allow-origins=*");
+                    driver = new ChromeDriver();
+                    break;
+
 
             }
         }
@@ -52,7 +55,7 @@ public class Driver {
     }
     public static void closeDriver(){
         if (driver != null){
-            //driver.close();
+            driver.close();
             driver=null;
         }
     }

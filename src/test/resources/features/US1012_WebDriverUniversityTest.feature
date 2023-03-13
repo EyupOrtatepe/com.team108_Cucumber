@@ -2,7 +2,7 @@
 
 Feature: US1012 Window Test
 
-  Scenario: TC16 User should be able to test new tab
+  Scenario: TC13 User should be able to test new tab
 
     Given user manually goes to "http://webdriveruniversity.com/" homepage
     Then user clicks on login portal link

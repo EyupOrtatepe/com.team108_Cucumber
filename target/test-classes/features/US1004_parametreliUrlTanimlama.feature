@@ -1,3 +1,4 @@
+
 Feature: US1004 kullanici parametreli olarak girdigi Url e gider
 
   Scenario: TC08 Kullanici url i parametre olarak girebilmeli

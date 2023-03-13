@@ -34,8 +34,7 @@ public class HerokuappStepDefinitons {
     public void butonunun_gorunmedigini_test_edin(String string) {
 
         try {
-            herokuappPage.deleteButton.isDisplayed();
-            Assert.assertTrue(false);
+            Assert.assertFalse(herokuappPage.deleteButton.isDisplayed());
         } catch (NoSuchElementException e) {
             Assert.assertTrue(true);
         }

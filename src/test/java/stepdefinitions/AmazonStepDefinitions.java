@@ -64,7 +64,7 @@ public class AmazonStepDefinitions {
         Assert.assertTrue(actualAramaSonucYazisi.contains(expectedIcerik));
     }
 
-    @Then("Amazonda {string} icin arama yapar")
+    @Then("amazonda {string} icin arama yapar")
     public void amazondaIcinAramaYapar(String arananKelime) {
 
         amazonPage.aramaKutusu.sendKeys(arananKelime + Keys.ENTER);

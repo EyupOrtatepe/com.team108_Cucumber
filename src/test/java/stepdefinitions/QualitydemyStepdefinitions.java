@@ -19,12 +19,12 @@ public class QualitydemyStepdefinitions {
         qdPage.ilkLoginLinki.click();
     }
     @Then("username olarak {string} girer")
-    public void username_olarak_girer(String qdGecerliUsername) {
-        qdPage.emailKutusu.sendKeys(ConfigReader.getProperty(qdGecerliUsername));
+    public void username_olarak_girer(String username) {
+        qdPage.emailKutusu.sendKeys(ConfigReader.getProperty(username));
     }
     @Then("password olarak {string} girer")
-    public void password_olarak_girer(String qdGecerliPassword) {
-        qdPage.passwordKutusu.sendKeys(ConfigReader.getProperty(qdGecerliPassword));
+    public void password_olarak_girer(String password) {
+        qdPage.passwordKutusu.sendKeys(ConfigReader.getProperty(password));
     }
     @Then("login butonuna basar")
     public void login_butonuna_basar() {
@@ -34,8 +34,28 @@ public class QualitydemyStepdefinitions {
     public void basarili_olarak_giris_yapildigini_test_eder() {
         Assert.assertTrue(qdPage.basariliGirisElementi.isDisplayed());
     }
+
+
+    @Then("ilk login linkine tiklar")
+    public void ilk_login_linkine_tiklar() {
+       qdPage.ilkLoginLinki.click();
+    }
+    @Then("giris yapilamadigini test eder")
+    public void giris_yapilamadigini_test_eder() {
+      Assert.assertTrue(qdPage.ilkLoginLinki.isDisplayed());
+    }
     @Then("Sayfayi kapatir")
     public void sayfayi_kapatir() {
     Driver.closeDriver();
+    }
+
+    @And("username olarak examples dan {string} girer")
+    public void usernameOlarakExamplesDanGirer(String username) {
+        qdPage.emailKutusu.sendKeys(username);
+    }
+
+    @And("password olarak examples dan{string} girer")
+    public void passwordOlarakExamplesDanGirer(String password) {
+        qdPage.passwordKutusu.sendKeys(password);
     }
 }

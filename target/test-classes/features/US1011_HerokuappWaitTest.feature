@@ -1,7 +1,7 @@
 
-Feature: US1011 herokuapp delete button test
-
-  Scenario: TC15 delete button un gorunur oldugunun testi
+Feature: US1011 herokuapp imlpilicitly wait
+  @wip
+  Scenario: TC12 kullanici imlpilicitly wait ile gorevleri yapabilmeli
 
   https://the-internet.herokuapp.com/add_remove_elements/ adresine gidin
 

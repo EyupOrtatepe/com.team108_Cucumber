@@ -17,7 +17,4 @@ public class HerokuappPage {
     public WebElement deleteButton;
 
 
-
-
-
 }

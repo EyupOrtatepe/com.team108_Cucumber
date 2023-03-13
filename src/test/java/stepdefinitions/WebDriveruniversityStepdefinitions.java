@@ -1,12 +1,11 @@
 package stepdefinitions;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
+import io.cucumber.java.en.*;
 import org.junit.Assert;
 import pages.WebDriverUniversityPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
+
 
 import java.util.Set;
 
@@ -53,7 +52,6 @@ public class WebDriveruniversityStepdefinitions {
     public void tests_that_the_text_of_popup_is_validation_failed() {
 
         String actualText = Driver.getDriver().switchTo().alert().getText();
-        System.out.println(actualText);
         String expectedText = "validation failed";
 
         Assert.assertEquals(expectedText,actualText);
